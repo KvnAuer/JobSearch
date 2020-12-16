@@ -1,3 +1,7 @@
+
+
+//Go gets information from indeed API
+
 public class Program {
     
 

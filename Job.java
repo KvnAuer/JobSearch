@@ -1,6 +1,8 @@
 
 
 
+//Creates job object. 
+
 
 public class Job 
 {
