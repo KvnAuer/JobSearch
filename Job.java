@@ -1,9 +1,3 @@
-
-
-
-//Creates job object. 
-
-
 public class Job 
 {
     private String title, company, location, description;

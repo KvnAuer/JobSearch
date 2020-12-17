@@ -1,8 +1,3 @@
-
-
-//Creates Job List Object
-
-
 public class JobList {
     private Job[] jobList;
 
