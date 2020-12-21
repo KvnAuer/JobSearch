@@ -11,6 +11,7 @@ public class Program {
 
     public static void main(String[] args)
     {
+        
 
         BufferedReader reader;
         String line;
@@ -18,13 +19,25 @@ public class Program {
 
 
         try {
+
+            reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Please enter your job title you are wanting"
+                + " to appply for.");
+            String myJob = reader.readLine();
+            myJob = myJob.replace(" ", "+");
+            System.out.println("Please enter your city: ");
+            String myCity = reader.readLine();
+            System.out.println("Please enter your state: ");
+            String myState = reader.readLine();
+            
             
             String myUrl = "https://api.indeed.com/ads/apisearch?"
         + "publisher=123412341234123&"
-        + "q=java+developer&l=austin%2C+tx&sort=&"
+        + "q=" + myJob + "&l=" + myCity 
+        + "%2C+" + myState + "&sort=&"
         + "radius=&st=&jt=&start=&limit=&"
         + "fromage=&filter=&latlong=1&co=us&chnl=&"
-        + "userip=1.2.3.4&"
+        + "userip=" + Config.myIp 
         + "useragent=Mozilla/%2F4.0%28Firefox%29&v=2";
         URL url = new URL(myUrl);
         connection = (HttpURLConnection) url.openConnection();
@@ -65,6 +78,6 @@ public class Program {
             e.printStackTrace();
         }
         
-        System.out.println("Hello World");
+    
     }
 }
